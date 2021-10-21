@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="home-section.css">
+    <link rel="stylesheet" href="home-nav.css">
+    <link rel="stylesheet" href="home-another.css">
+</head>
+<style>
+
+</style>
+<body>
+   <div class="navigate">
+    <div class="nav-deco"></div>
+    <img src="/collegespace/pngegg.png" alt="" class="main-logo">
+    <div class="nav">
+        <ul>
+            <li><div><img src="/collegespace/home/dwn.png" alt=""></div><a href="#">Home</a></li>
+            <li><div><img src="/collegespace/home/dwn.png" alt=""></div><a href="#">Our Team</a></li>
+            <li><div><img src="/collegespace/home/dwn.png" alt=""></div><a href="#">Study Space</a></li>
+            <li><div><img src="/collegespace/home/dwn.png" alt=""></div><a href="/collegespace/form/form.html">Contribute</a></li>
+            <img src="/collegespace/home/Untitled5_20211015181823.png" alt="" class="engine">
+        </ul>
+    </div>
+      <div class="button" onclick="fun()">
+        <span class="bar">|</span><span class="bar">|</span><span class="bar">|</span>
+        </div> 
+
+            <div class="menu-2">
+                <ul >
+                    <li><a href="#" data-text="Home" >Home</a></li>
+                    <li><a href="#" data-text="Our Team" >Our Team</a></li>
+                    <!-- <li><a href="/sign_up-sign_in.html" data-text="Log in/Sign up" >Log in/Sign up</a></li> -->
+                    <li><a href="#" data-text="Study Space" >Study Space</a></li>
+                    <li><a href="/collegespace/form/form.html" data-text="Contribute" >Contribute</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="whole">    
+        <div class="section">
+            <h1 class="primary-heading ph">HOLA! IIITIANS</h1>
+            <img src="/collegespace/home/IMG20190810113643.jpg" alt="img_1" class="primary-img pi">
+            <div class="secondary seco">
+                <img src="https://images.unsplash.com/photo-1603628455234-3f0bb501c3c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8NDAwJTIweCUyMDQwMHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60" alt="img_2" class="secondary-img">
+                <img src="https://images.unsplash.com/photo-1563877785191-06243debe419?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8NDAwJTIweCUyMDQwMHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60" alt="img_3" class="secondary-img">
+            </div> 
+            <p class="secondary-heading sh">WHAT IS COLLEGE SPACE ?</p>
+            <p class="description desp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto expedita repudiandae
+                vero labore neque, officia corrupti nisi harum maiores dolorem, quia mollitia, ea tenetur reprehenderit
+                accusamus? Adipisci tempore pariatur eaque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat repudiandae cum rerum possimus nihil praesentium non quibusdam voluptate consectetur veritatis!</p>
+                
+            <button class="btn bb">CONTACT US</button>
+        </div>
+        <div class="another-section">
+            <div class="cut-1"></div>
+            <div class="sub-section">
+                <h1 class="visit-heading ">VISIT ALSO</h1>
+                <div class="cardset">
+                    <div class="card-1 card cd-1">
+                        <img src="https://news.campuzone.com/wp-content/uploads/2021/07/campuzone.jpg" alt="" class="card-photo">
+                          <h1 class="card-name"><a href="">BlindQuiz</a> </h1>
+                          <p class="card-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia totam, voluptatum itaque ratione beatae libero temporibus ipsa ea nihil! Nostrum!</p>
+                    </div>
+                    <div class="card-2 card cd-2" >
+                    <img src="/collegespace/home/TimeLineMap.jpg" alt="" class="card-photo">
+                    <h1 class="card-name"><a href="">TimeLineMap</a></h1>
+                    <p class="card-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia totam, voluptatum itaque ratione beatae libero temporibus ipsa ea nihil! Nostrum!</p></div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="footp">Copyright &copy; 2021-22</p>
+            </div>
+        </div>
+        </div>
+        <!-- script of section aka main section -->
+        <script>
+            const primaryHeading=document.getElementsByClassName('primary-heading')[0];
+            const secondHeading=document.getElementsByClassName('secondary-heading')[0];
+            const desc=document.getElementsByClassName('description')[0];
+            const section1=document.getElementsByClassName('section')[0];
+            const pimg=document.getElementsByClassName('primary-img')[0];
+            const seco=document.getElementsByClassName('secondary')[0];
+            const btn=document.getElementsByClassName('bb')[0];
+            const option1={  root: null,
+        rootMargin: "-40% 0px 0px 0px" };
+            const observer1= new IntersectionObserver(function(entries,observer1){
+                entries.forEach(entry=>{
+                    if(!entry.isIntersecting)
+                    {
+                        primaryHeading.classList.add('ph');
+                        secondHeading.classList.add('sh');
+                        desc.classList.add('desp'); 
+                        pimg.classList.add('pi'); 
+                        seco.classList.add('seco'); 
+                        btn.classList.add('bb'); 
+                    }
+                    else
+                    {
+                        primaryHeading.classList.remove('ph');    
+                        secondHeading.classList.remove('sh');
+                        desc.classList.remove('desp'); 
+                        pimg.classList.remove('pi'); 
+                        seco.classList.remove('seco'); 
+                        btn.classList.remove('bb'); 
+                    }
+                    console.log(btn);
+                })
+            },option1);
+            observer1.observe(section1);
+        </script>
+        <!-- script of another-section aka card section -->
+    <script>
+            const visitHeading=document.getElementsByClassName('visit-heading')[0];
+            const cd1=document.getElementsByClassName('card')[0];
+            const cd2=document.getElementsByClassName('card')[1];
+            const section=document.getElementsByClassName('another-section')[0];
+            const option={  root: null,
+        rootMargin: "-10%" };
+            const observer= new IntersectionObserver(function(entries,observer){
+                entries.forEach(entry=>{
+                    if(!entry.isIntersecting)
+                    {
+                        visitHeading.classList.add('move-visit');
+                        cd1.classList.add('cd-1');
+                        cd2.classList.add('cd-2');
+                    }
+                    
+                    else
+                    {
+                        visitHeading.classList.remove('move-visit');
+                        cd1.classList.remove('cd-1');
+                        cd2.classList.remove('cd-2');
+                    }
+                })
+            },option);
+            observer.observe(section);
+        </script>
+    <script>
+        let t=document.getElementsByClassName('button')[0];
+        let u=document.getElementsByClassName('menu-2')[0];
+        let a1=document.getElementsByTagName('span')[0];
+        let a2=document.getElementsByTagName('span')[1];
+        let a3=document.getElementsByTagName('span')[2];
+        function fun(){
+t.classList.toggle('button-active');
+            u.classList.toggle('menu-2-active');
+            a1.classList.toggle('bar-1');
+            a2.classList.toggle('bar-2');
+            a3.classList.toggle('bar-3');
+        }
+    </script>
+</body>
+</html>

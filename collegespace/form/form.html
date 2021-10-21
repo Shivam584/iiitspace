@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap" rel="stylesheet"> 
+    <title>Form</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;            
+            position: relative;  
+            width: 100%; 
+            background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v535batch2-mynt-43.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9f602de67a347b7c50ef8eeac3835189") no-repeat center/cover;
+            background-attachment: fixed;
+        
+            
+        }
+        .background{
+            display: none;
+            position: absolute;
+            overflow: hidden;      
+            /* transform: rotate(-90deg); */
+            width: 100%;
+         min-height: 100%;
+            object-position: center;
+            object-fit: cover;
+        }
+        .img{
+            display: none;
+            width: clamp(50%,50vw,75%);
+            object-fit: cover;
+            height: 100%;
+            object-position: center;
+        }
+        .form-card{
+            position: absolute;
+            top: 2em;
+            bottom: 2em;
+            padding: .5em;
+            width: 80%;
+            border-radius: 10px;
+            background-color:rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 20px 4px rgba(0, 0, 0, 0.4);
+            /* height: 100%; */
+        }
+        form,.form-card{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5em;
+        }
+        form{
+            width: 100%;
+            max-width: 550px;
+            flex-direction: column;
+            border: 1px solid whitesmoke;
+            padding: 1em;
+min-height: 470px;           
+            border-radius: 5px;
+        }
+        input,textarea{
+            width: 100%;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid white;
+            outline: none; 
+            color: whitesmoke;
+        }
+        input::placeholder,textarea::placeholder{
+            
+            font-weight: 300;
+        }
+        select,#fl{
+            /* border: none; */
+            color: grey;
+            background: transparent;
+            min-width: 200px;
+        }
+        #fl{
+            padding-bottom: 4px;
+            width: 100%;
+            font-weight: 300;
+            color: honeydew;
+            
+        }
+.btn{
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+    text-transform: uppercase;
+    color: whitesmoke;
+    letter-spacing: 5px;
+    font-weight: 600;
+    border-radius: 2px;
+    font-family: 'Titillium Web', sans-serif;
+    box-shadow: 0 0 5px 2px black;
+    background-color: rgb(83, 83, 83);
+    transition: .5s;
+}
+.btn:hover{
+    letter-spacing: 15px;
+    color: rgb(83, 83, 83);
+    background-color: whitesmoke;
+
+}
+@media screen and (min-width : 740px) {
+    .background{
+        display: unset;
+    }
+    body{
+        background: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <img src="/collegespace/form/widform.jpg" alt="" class="background">
+    <div class="form-card">
+        <form action="backend.py">
+            <input type="text" name="username" id="user-info" placeholder="USERNAME">
+            <div class="year">
+                 <select name="mySelct" id="yr" >
+                     <option value="" disabled selected>YEAR </option>
+                     <option value="Y1">1st</option>
+                     <option value="Y2">2nd</option>
+                     <option value="Y3">3rd</option>
+                     <option value="Y4">4th</option>
+                    </select>
+                </div>
+                <div class="branch">
+                 <select name="mySelct" id="br" >
+                     <option value="" disabled selected>BRANCH </option>
+                     <option value="B1">CSE</option>
+                     <option value="B2">IT</option>
+                     <option value="B3">CE</option>
+                     <option value="B4">ETC</option>
+                     <option value="B5">EEE</option>
+                    </select>
+                </div>
+                <div class="subject">
+                    <select name="mySelct" id="sub" >
+                        <option value="" disabled selected>SUBJECT </option>
+                        <option value="S1">OS</option>
+                        <option value="S2">COA</option>
+                        <option value="S3">IWT</option>
+                        <option value="S4">MATHS-1</option>
+                    </select>
+                </div>
+                <input type="file" name="" id="fl" placeholder="upload file here">
+                <input type="text" name="" id="lk" placeholder="LINK">
+                <textarea name="description" id="desc" cols="30" rows="2" placeholder="DESCRIPTION"></textarea>
+                <button class="btn" id="submit">Submit</button>
+              
+            </form>
+        </div>
+    </body>
+    </html>

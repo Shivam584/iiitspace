@@ -1,0 +1,152 @@
+.whole{
+    position: absolute;
+width: 100%;
+top: 150px;
+}
+.another-section{
+overflow: hidden;
+margin-top: 2em;
+width: 100%;
+min-height: 700px;
+background-color: lightblue;
+position: relative;
+}
+.cut-1{
+width: 100%;
+height: 60px;
+position: absolute;
+top: 0px;
+background-color:  rgb(39, 35, 35) ;
+clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+.sub-section{
+position: absolute;
+top: 65px;
+width: 100%;
+/* border: 2px solid red; */
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+align-items: center;
+}
+.visit-heading{
+font-family: 'Reggae One', cursive;
+position: relative;
+font-size: clamp(2em,6vw,3em);
+left: 0;
+padding:  0 .2em ;
+margin: 5px 0; 
+text-align: center;
+display: inline-block;
+border: 1px solid black;
+border-left: .2em solid black;
+border-right: .2em solid black;
+border-radius: 20px;
+box-shadow: 0 0 5px 0px black;
+text-shadow: 0 0 5px black;
+transition: 1s;
+opacity: 1;
+background-color: cornsilk;
+}
+.move-visit{
+border: none;
+font-size: 2em;
+opacity: 0;
+left: -500px;
+transition: 1s;
+
+}
+.cardset{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 2em;
+}
+.card{
+/* border: 2px solid red; */
+width: 30%;
+min-width:  220px;
+display: flex;
+flex-direction: column;
+gap: 1em;
+justify-content: space-around;
+align-items: center;
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+transform: translateX(0);
+transition: 1.8s;
+background-color: #ffe1e1;
+box-shadow: 0 2px 10px black;
+/* background: url('https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?size=626&ext=jpg') center/cover ; */
+}
+
+.cd-1{
+transform: translateX(-200px);
+opacity: 0;
+}
+.cd-2{
+transform: translateX(200px);
+opacity: 0;
+}
+.card::before,.card::after{
+content:'';
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: .4;
+transition: .5s;
+z-index: 1;
+/* background-color: yellow; */
+}
+.card::before{
+background-color: black;
+clip-path:polygon(0 0, 0% 100%, 100% 0) ;
+}
+.card:hover::before{
+clip-path:polygon(0 0, 0 0, 0 0) ;
+}
+.card:hover::after{
+clip-path:polygon(100% 100%,100% 100%,100% 100%) ;
+}
+.card::after{
+background-color: black;
+clip-path:polygon( 0% 100%, 100% 0,100% 100%) ;
+
+}
+.card-name{
+/* display: none; */
+font-family: 'Roboto', sans-serif;  
+padding: 0 10px;
+font-size: clamp(1.2rem,3vw,2rem);
+transition: ease-in-out .2s;
+}
+.card-name a{
+text-decoration: none;
+color: slategrey;
+}
+.card-name a:hover{
+color: black;
+}
+
+.card-photo{
+border-radius: 10px;
+width: 100%;
+/* border: 2px solid red; */
+}
+.card-desc{
+text-align: justify;
+font-family:  cursive;
+font-size: clamp(.7rem,2vw,1rem);
+/* border: 2px solid red; */
+padding: 1em;
+padding-top: 0;
+border-radius: 0 0 10px 10px ;
+transition: .7s;
+}
+
+.footp{
+font-size: clamp(.6rem,2vw,1rem);
+text-align: right;
+padding-right: clamp(3em,2vw,5em) ;
+}
