@@ -40,7 +40,7 @@ grid-template-columns: repeat(2,minmax(20em,39em)) minmax(1em,19em);
     margin: 0.3em 0;
     margin: 0;
     margin-bottom: 0px;
-    color: orange;
+    color: #ffc04c;
     font-weight: 600;
     line-height: 1;
     margin-bottom: 1em;
@@ -101,7 +101,7 @@ padding: 1em 0;
 text-align: justify;
 box-sizing: border-box;
 line-height: 1.5;
-color: orangered;
+color: : cornsilk;
 }
 .desp{
     transform: translateX(-200px)  ;
